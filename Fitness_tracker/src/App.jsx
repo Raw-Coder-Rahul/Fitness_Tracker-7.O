@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled, { ThemeProvider } from 'styled-components'
+import { lightTheme } from './utills/Themes'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Authentication from './pages/Authentication';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: ${({ theme }) => theme.bg};
+  border-radius: 8px;
+  box-shadow: ${({ theme }) => theme.shadow};
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+`;
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <ThemeProvider theme={lightTheme}>
+        <BrowserRouter>
+          {/* <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes> */}
+          <Container>
+            {/* <h2>Your Fitness Data</h2>
+            <p>Track your workouts, nutrition, and progress.</p> */}
+            <Authentication />
+          </Container>
+        </BrowserRouter>
+      </ThemeProvider>
+    </div>
   )
 }
 

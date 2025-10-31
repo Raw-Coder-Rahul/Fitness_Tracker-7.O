@@ -1,0 +1,28 @@
+export const lightTheme = {
+  bg: "#FFFFFF",
+  bgLight: "#F5F5F5",
+  primary: "#1976D2",
+  secondary: "#5B86E5",
+
+  disabled: "#B1B2B3",
+  menubar: "#191C29",
+  navbar: "#242B3F",
+  arrow: "#AFAFB5",
+  menu_primary_text: "#FFFFFF",
+  menu_secondary_text: "#B1B2B3",
+  table_header: "#E0E0E0",
+  text_primary: "#000000",
+  text_secondary: "#4F4F4F",
+  card: "#FFFFFF",
+  black: "#000000",
+  white: "#FFFFFF",
+  shadow: "rgba(0, 0, 0, 0.1)",
+  green: "#4CAF50",
+  red: "#F44336",
+  yellow: "#FF9800",
+  orange: "#EB9E34",
+  popup: "#FFFFFF",
+  popup_text_primary: "#000000",
+  popup_text_secondary: "#4F4F4F",
+  output_node: "#49516b"
+};
