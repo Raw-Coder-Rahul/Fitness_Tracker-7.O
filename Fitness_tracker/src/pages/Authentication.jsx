@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import LogoImage from '../../public/images/logo.png';
-import AuthImage from '../../public/images/fitness.jpg';
+import AuthImage from '../../public/images/fitness2.jpg';
+import SignIn from '../components/SignIn';
+import SignUp from '../components/SignUp';
 
 const Container = styled.div`
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   background: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.text_primary};
@@ -34,8 +36,7 @@ const Logo = styled.img`
 const Image = styled.img`
   position: relative;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
 `;
 
 
@@ -80,6 +81,7 @@ const Authentication = () => {
       <Right>
         {!isLogin ? (
           <>
+            <SignIn />
             <Text>Don't have an account?
               <TextButton onClick={() => setIsLogin(true)}>
                 Sign Up
@@ -87,6 +89,7 @@ const Authentication = () => {
             </Text>
           </>) : ( 
           <>
+            <SignUp />
             <Text>Already have an account?
               <TextButton onClick={() => setIsLogin(false)}>
                 Sign In

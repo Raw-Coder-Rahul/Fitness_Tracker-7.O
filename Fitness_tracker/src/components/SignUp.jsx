@@ -23,12 +23,12 @@ const Span = styled.div`
   color: ${({ theme }) => theme.text_secondary};
 `;
 
-function SignIn() {
+function SignUp() {
   return (
     <Container>
       <div>
-        <Title>Welcome to the Fitness Tracker</Title>
-        <Span>Please login with your details Here!</Span>
+        <Title>Create New Account</Title>
+        <Span>Please enter details to create an account.</Span>
       </div>
       <div style=
         {{
@@ -36,6 +36,11 @@ function SignIn() {
           gap: "20px",
           flexDirection: "column",
         }}>
+        <TextInput
+          label="Full Name"
+          placeholder="Enter your full name"
+          type="text"
+        />
         <TextInput
           label="Email Address"
           placeholder="Enter your email"
@@ -46,10 +51,15 @@ function SignIn() {
           placeholder="Enter your password"
           type="password"
         />
-        <Button text="Sign In" />
+        <TextInput
+          label="Confirm Password"
+          placeholder="Confirm password"
+          type="password"
+        />
+        <Button text="Sign Up" />
       </div>
     </Container>
   )
 }
 
-export default SignIn;
+export default SignUp;
