@@ -16,7 +16,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 24px;
   box-shadow: ${({ theme }) => theme.shadow};
-  border-bottom: 1px solid ${({ theme }) => theme.border_secondary};
+  border-bottom: 1px solid ${({ theme }) => theme.border_secondary + 20};
 `;
 
 const LeftGroup = styled.div`
@@ -74,8 +74,9 @@ const SideDrawer = styled.div`
   left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   width: 260px;
   height: calc(100vh - 80px);
-  background-color: ${({ theme }) => theme.nav_bg + 'F2'};
-  box-shadow: ${({ theme }) => theme.shadow};
+  background-color: ${({ theme }) => theme.text_secondary};
+  opacity: 1;
+  box-shadow: ${({ theme }) => theme.shadow + '80'};
   display: flex;
   flex-direction: column;
   padding: 24px;
