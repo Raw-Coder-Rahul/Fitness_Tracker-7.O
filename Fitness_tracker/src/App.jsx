@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Authentication from './pages/Authentication';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
+import Dashboard from './pages/Dashboard';
+import Workouts from './pages/Workouts';
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -28,19 +30,17 @@ function App() {
         {user ? (
           <Container>
             <Navbar />
+            <Routes>
+              {/* Define your routes here */}
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/workouts" element={<Workouts />} />
+            </Routes>
           </Container>
         ) : (
           <Container>
             <Authentication />
           </Container>
         )}
-            {/* <h2>Your Fitness Data</h2>
-            <p>Track your workouts, nutrition, and progress.</p> */}
-            {/* <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes> */}
         </BrowserRouter>
       </ThemeProvider>
     </div>
