@@ -36,7 +36,8 @@ const AddWorkout = ({workout, setWorkout}) => {
 #Category
 - WorkOut Name
 - Duration
-- Sets/Reps
+- Sets
+- Reps
 - Weight`}
         value={workout}
         handleChange={(e) => setWorkout(e.target.value)}
