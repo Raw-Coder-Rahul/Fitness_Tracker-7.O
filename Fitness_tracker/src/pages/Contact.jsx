@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// Styled components (unchanged)...
 
 const Container = styled.div`
   flex: 1;
@@ -97,8 +101,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', form);
-    alert(`Thanks for reaching out, ${form.name}! Our team will get back to you soon.`);
+    toast.success(`Thanks for reaching out, ${form.name}! Our team will get back to you soon.`);
   };
 
   return (
@@ -139,6 +142,8 @@ const Contact = () => {
             Instagram | Twitter | YouTube
           </Paragraph>
         </Section>
+
+        <ToastContainer position="bottom-right" autoClose={4000} />
       </Wrapper>
     </Container>
   );
