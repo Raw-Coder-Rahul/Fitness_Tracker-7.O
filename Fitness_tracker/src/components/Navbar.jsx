@@ -195,7 +195,7 @@ function Navbar() {
           <NavItem to="/" exact="true">Dashboard</NavItem>
           <NavItem to="/workouts">Workouts</NavItem>
           <NavItem to="/tutorials">Tutorials</NavItem>
-          <NavItem to="/progress">Blogs</NavItem>
+          <NavItem to="/blogs">Blogs</NavItem>
           <NavItem to="/contact">Contact Us</NavItem>
         </NavMenu>
 
@@ -214,7 +214,7 @@ function Navbar() {
           <NavItem to="/" onClick={() => setIsOpen(false)}>Dashboard</NavItem>
           <NavItem to="/workouts" onClick={() => setIsOpen(false)}>Workouts</NavItem>
           <NavItem to="/tutorials" onClick={() => setIsOpen(false)}>Tutorials</NavItem>
-          <NavItem to="/progress" onClick={() => setIsOpen(false)}>Blogs</NavItem>
+          <NavItem to="/blogs" onClick={() => setIsOpen(false)}>Blogs</NavItem>
           <NavItem to="/contact" onClick={() => setIsOpen(false)}>Contact Us</NavItem>
 
           {/* Show logout only on small screens */}
